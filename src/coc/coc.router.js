@@ -40,7 +40,9 @@
   } catch (error) {
     console.log('something went wrong with updateGithubFile()', error);
     return {
-      error
+        res.status(400).send(error);
+
+      
     };
   }
    console.log(resp.data)

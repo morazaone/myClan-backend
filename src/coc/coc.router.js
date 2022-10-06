@@ -41,8 +41,8 @@
     console.log('something went wrong with updateGithubFile()', error);
     res.status(400).send(error);
   }
-   console.log(resp.data)
-   res.status(200).send(res);
+   console.log(res.data)
+   res.status(200).send(resp.data);
 });
 
 

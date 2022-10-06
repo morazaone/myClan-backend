@@ -38,9 +38,7 @@
   * Server Activation
   */
  
-//  app.listen(serverPort, () =>
-//    console.log(`API Server listening on port ${serverPort}`)
-//  );
+ app.listen(9000, () =>{} );
  app.use("/.netlify/functions/index", apiRouter);
 
 

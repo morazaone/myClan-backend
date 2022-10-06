@@ -27,7 +27,6 @@
  cocRouter.get("/getClanInfo", async (req, res) => {
   let resp;
   //json format 
-  console.log(`Bearer ` + TOKEN +'.')
   try {
     resp = await axios.get('https://api.clashofclans.com/v1/clans/%238RP8LRG', 
     { 
@@ -39,10 +38,17 @@
     //  console.log(resp.data);
   } catch (error) {
     console.log('something went wrong with updateGithubFile()', error);
-    res.status(400).send(error);
+    res.status(400).send({
+      statusCode:200,
+      body:error
+
+    });
   }
    console.log(res.data)
-   res.status(200).send(resp.data);
+   res.status(200).send({
+    statusCode:200,
+    body:resp.data
+  });
 });
 
 

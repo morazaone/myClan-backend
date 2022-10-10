@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "start": "node src/index.js",
+    "build": "npm build src"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,6 @@
     "helmet": "^4.1.0",
     "jwks-rsa": "^1.9.0",
     "request": "^2.88.2",
-    "netlify-lambda": "^1.4.3",
     "serverless-http": "^1.9.1"
   },
   "devDependencies": {
